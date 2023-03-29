@@ -6,10 +6,10 @@
 	z-index: 1000;
 	overflow: hidden;
 	width: 100%;
-	height: 100%;
+	height: 5739px;
 	background-position: center 0;
 	opacity: 0;
-	// opacity: 0.7;
+	//opacity: 0.7;
 } 
 
 body,
@@ -82,7 +82,7 @@ body {
 		width: 100%;
 		left: 0;
 		top: 0;
-		z-index: 999;
+		z-index: 997;
 
 		touch-action: none;
     -webkit-overflow-scrolling: none;
@@ -91,7 +91,7 @@ body {
     overscroll-behavior: none;
 
 		&::before {
-			z-index: 999;
+			z-index: 997;
 			opacity: 0.76;
 		}
 	}
@@ -101,17 +101,20 @@ body {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
-	// display: flex;
+	padding-top: var(--header-h);
+
+	//display: flex;
+	//flex-direction: column;
+
 	// flex-direction: row; 
-// /	overflow: scroll;
-	// width: 100%; 
-	// height: 100vh;
-	// height: calc(var(--vh, 1vh) * 100);
-	
-	
+	// /	overflow: scroll;
+	//width: 100%;
+	//height: 100vh;
+	//height: calc(var(--vh, 1vh) * 100);
+	//overflow-y: auto;
 }
 main{
-	flex-grow: 1;
+	//flex-grow: 1;
 }
 // .main-wrapper__inner{
 // 	// overflow-x: hidden;
@@ -537,6 +540,48 @@ iframe {
 	img.object-fit-js{
 		width: 100%;
 		height: 100%;
+		object-fit: cover;
+	}
+}
+
+//
+.accept-ratio-frame {
+	display: block;
+	width: 100%;
+	height: 0;
+	position: relative;
+
+	overflow: hidden;
+	&:hover {
+		img {
+			//filter: brightness(100%);
+		}
+	}
+
+	img {
+		@include mt();
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+.accept-ratio-frame-nh {
+	display: block;
+	width: 100%;
+	height: 0;
+	position: relative;
+	overflow: hidden;
+
+	img {
+		@include mt();
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
 		object-fit: cover;
 	}
 }

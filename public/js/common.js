@@ -309,8 +309,9 @@ function eventHandler() {
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
-	// JSCCommon.CustomInputFile(); 
+	// JSCCommon.CustomInputFile();
+
+	//
 	var x = window.location.host;
 	let screenName;
 	screenName = 'screen/'+document.body.dataset.bg;
@@ -318,29 +319,34 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(${screenName});"></div>`);
 	}
 
-
+	//luckyone js
+	let header = document.querySelector(".header--js");
+	function calcHeaderHeight() {
+		document.documentElement.style.setProperty('--header-h', `${header.offsetHeight}px`);
+		window.setTimeout(() => {document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);}, 10);
+		window.setTimeout(() => {document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);}, 100);
+	}
 	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav  ');
-		if (!topNav) return;
 		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
+			? header.classList.add('fixed')
+			: header.classList.remove('fixed');
 	}
 
-	function whenResize() {
+	if (header){
+		window.addEventListener('resize', calcHeaderHeight, {passive: true});
+		window.addEventListener('scroll', calcHeaderHeight, {passive: true});
+		calcHeaderHeight();
+
+		window.addEventListener('scroll', setFixedNav, { passive: true });
+		window.addEventListener('resize', setFixedNav, { passive: true });
 		setFixedNav();
 	}
 
-	window.addEventListener('scroll', () => {
-		setFixedNav();
+	$('.put-curr-year-js').each(function (){
+		this.innerHTML = new Date().getFullYear();
+	})
 
-	}, { passive: true })
-	window.addEventListener('resize', () => {
-		whenResize();
-	}, { passive: true });
-
-	whenResize();
-
+	//end luckyoneJs
 
 	let defaultSl = {
 		spaceBetween: 0,

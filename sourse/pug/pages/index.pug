@@ -15,22 +15,26 @@ include ../blocks/footer/_footer.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= null
+	- let  bg='index.png'
 
 block title
 	- let  title= index.head.title
 	title= title
 block pagecontent
-	//- +mob-mnu()
+	+mob-mnu()
+		li.menu-item: a.current(href="/") Home
+		li.menu-item: a(href="/about.html") About
+		li.menu-item: a(href="/contact.html") Contact
 	+header()
 		+top-nav()
-		+topLine
+			li.menu-item: a.current(href="/") Home
+			li.menu-item: a(href="/about.html") About
+			li.menu-item: a(href="/contact.html") Contact
 	main
 		+headerBlock 
 		+sCatalog
-		+sForm()
-		+sContact()
-		
+		//-+sForm()
+		//-+sContact()
 	+footer()
       
 

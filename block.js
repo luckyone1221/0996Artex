@@ -23,36 +23,16 @@ const fileSources = {
 		.container
 			+b.section-title.text-center
 				h2 {blockName}
-				
-			+e.row.row
 	// end {blockName}`,
 	scss: `// start .{blockName}
 .{blockName} \{
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
-
-	}
-	.section-title{
-		
-	}
-	&__col{
-
-	}
-	&__item{
-
-	}
-
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	// --sPT: #{rem(0)};
+	// --sPB: #{rem(0)};
+	// --sTPB: #{rem(0)};
+	
+	&__{}
+	&__{}
+	&__{}
 } // end.{blockName}`
 	,
 	// js: `let {blockName}Vue = new Vue({

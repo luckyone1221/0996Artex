@@ -2,54 +2,67 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
 
+	background-color: transparent;
+
+	padding: rem(15) 0;
+	@include media-breakpoint-up(xl){
+		padding: rem(18) 0;
 	}
-	.section-title{
-		
+	@include media-breakpoint-up(xxl){
+		padding: rem(24) 0;
 	}
+
 	&__col{
+		&--logo{
 
+			@include media-breakpoint-up(lg){
+				width: 40%!important;
+			}
+		}
 	}
-	&__item{
-
-	}
-	&__slide{
+	&__logo{
+		width: 48px;
 		height: auto;
+
+		img{
+			max-width: 100%;
+		}
+	}
+	.menu{
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	.menu-item{
+		margin-right: rem(32);
+		@include media-breakpoint-up(lg){
+			margin-right: rem(48);
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+
+		a{
+			display: inline-block;
+			line-height: 1.5;
+
+			color: $body-color;
+			&:hover{
+				color: $primary;
+			}
+			&.current{
+				color: $primary!important;
+			}
+		}
 	}
 
-	@include media-breakpoint-up(md) {}
-
-	@include media-breakpoint-up(sm) {}
-
-	@include media-breakpoint-up(xs) {}
-
-	// 
-	@include media-breakpoint-between(md, xl) {}
-
-	// 
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
-
-	// 
-	@include media-breakpoint-down(xl) {}
-
-	@include media-breakpoint-down(lg) {}
-
-	@include media-breakpoint-down(md) {}
-
-	@include media-breakpoint-down(sm) {}
-
-	@include media-breakpoint-down(xs) {}
+	&__btn{
+		@extend .btn;
+		@extend .btn-outline-dark;
+	}
+	&__{}
 }
 
 

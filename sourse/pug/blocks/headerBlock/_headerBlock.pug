@@ -1,10 +1,23 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+		+e.inner
+			+e.container.container
+				+e.row.row
+					+e.col--left.col-sm-8.col-lg-auto.order-1.order-lg-0
+						+e.small Supporting companies with strategy, client acquisition & growth on domestic and foreign markets
+					+e.col--right.col-sm-11.col-lg-auto
+						+b.section-title
+							h1 Atrex Group Supporting companies with strategy.
+						+e.year.d-none.d-lg-block
+							| ©
+							span.put-curr-year-js 1997
+							|
+							| Atrex Group
+				+e.year.d-lg-none
+					| ©
+					span.put-curr-year-js 1997
+					|
+					| Atrex Group
+		+pic('headerBlock-img.jpg')(class="headerBlock__pic")
 	// end headerBlock
