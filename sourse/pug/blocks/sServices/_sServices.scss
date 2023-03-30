@@ -1,7 +1,7 @@
 // start .sServices
 .sServices {
 	@include media-breakpoint-up(xxl){
-		--sPB: #{rem(70)};
+		--sPB: #{rem(50)};
 		--sPT: #{rem(64)};
 	}
 
@@ -69,10 +69,10 @@
 
 		border-right: 1px solid $black;
 
-		padding: 0;
+		padding: 0!important;
 		@include media-breakpoint-up(sm){
 			@include sw-col();
-			padding: rem(24) 0;
+			padding: rem(24) 0!important;
 		}
 
 		@include media-breakpoint-down(sm){
