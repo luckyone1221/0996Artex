@@ -1,7 +1,10 @@
 // start .sMore
 .sMore {
 	--sPT: #{rem(53)};
-	--sPB: #{rem(0)};
+
+	@include media-breakpoint-up(xxl){
+		--sPB: #{rem(100)};
+	}
 	--sTPB: #{rem(24)};
 
 	&__box{

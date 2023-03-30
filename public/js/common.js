@@ -359,6 +359,41 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+	//
+	function counters() {
+		let countbox = $('.counter-wrap-js');
+		let show = true;
+		console.log(countbox.length);
+		if (!countbox.length && !show) return;
+		$('.counter-js').css('opacity', '1');
+		$('.counter-js').spincrement({
+			thousandSeparator: "",
+			duration: 3000
+		});
+		show = false;
+	}
+
+	let wow = new WOW({
+		// mobile: false,
+		animateClass: 'animate__animated',
+		callback: function (box) {
+			setTimeout(() => {
+				counters();
+			}, 10);
+		}
+	});
+	wow.init();
+
+	//
+	let sReviewSlider = new Swiper('.sReview-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		loop: true,
+		navigation: {
+			nextEl: '.sReview-next-js',
+			prevEl: '.sReview-prev-js',
+		},
+	});
 
 	//end luckyoneJs
 

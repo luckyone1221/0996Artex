@@ -1,0 +1,53 @@
+mixin sReview(data)
+	// start sReview
+	+b.SECTION.sReview.section#sReview&attributes(attributes)
+		+pic('sReview-bg.jpg')(class="sReview__bg")
+		.container
+			+e.row.row.align-items-center.gy-4
+				.col
+					+b.section-title
+						h2 Reviews
+				.col-auto
+					+e.btn-row.row
+						.col-auto
+							+e.btn.sReview-prev-js
+								+icon('arrow-left')
+						.col-auto
+							+e.btn.sReview-next-js
+								+icon('arrow-right')
+			+e.slider-wrap
+				.swiper.sReview-slider-js
+					.swiper-wrapper
+						+sReviewSlide({
+							txt: "Lorem ipsum dolor sit amet consectetur. massa orci facilisis odio a enim augue sit. Sed nulla fringilla venenatis consectetur  augue magnis dolor. Ut aliquam non imperdiet viverra. Purus risus dictum phasellus sodales maecenas dolor. lectus dignissim eleifend arcu cursus congue etiam at neque. Rhoncus elit pulvinar adipiscing porta quam.",
+							imgName: "sReview-1.png",
+							name: "Daniel A.",
+							gray: "Lorem ipsum dolor sit",
+						})
+						+sReviewSlide({
+							txt: "Lorem ipsum dolor sit amet consectetur. massa orci facilisis odio a enim augue sit. Sed nulla fringilla venenatis consectetur  augue magnis dolor. Ut aliquam non imperdiet viverra. Purus risus dictum phasellus sodales maecenas dolor. lectus dignissim eleifend arcu cursus congue etiam at neque. Rhoncus elit pulvinar adipiscing porta quam.",
+							imgName: "sReview-1.png",
+							name: "Sasha G.",
+							gray: "Lorem ipsum dolor sit",
+						})
+						+sReviewSlide({
+							txt: "Lorem ipsum dolor sit amet consectetur. massa orci facilisis odio a enim augue sit. Sed nulla fringilla venenatis consectetur  augue magnis dolor. Ut aliquam non imperdiet viverra. Purus risus dictum phasellus sodales maecenas dolor. lectus dignissim eleifend arcu cursus congue etiam at neque. Rhoncus elit pulvinar adipiscing porta quam.",
+							imgName: "sReview-1.png",
+							name: "Yura K.",
+							gray: "Lorem ipsum dolor sit",
+						})
+	// end sReview
+
+mixin sReviewSlide(data)
+	.swiper-slide
+		+e.item
+			+e.txt=data.txt
+			+e.img-row.row.align-items-center
+				.col-auto
+					+e.img
+						img(loading="lazy" src=`img/@2x/${data.imgName}` alt="")
+				.col
+					+e.name
+						span=data.name
+						img(loading="lazy" src="img/svg/linkedIn.svg" alt="")
+					+e.gray=data.gray

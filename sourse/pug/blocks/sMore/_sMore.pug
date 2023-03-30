@@ -40,6 +40,6 @@ mixin sMoreImg(imgNum)
 		img(loading="lazy" src=`img/@2x/sMore-${imgNum}.jpg` alt="")
 
 mixin sMoreBtn(href="#")
-	+b.txt-btn
+	+b.txt-btn&attributes(attributes)
 		span Click here to learn mo
 		span re
