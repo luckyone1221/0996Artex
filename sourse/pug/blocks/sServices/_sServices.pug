@@ -1,0 +1,46 @@
+mixin sServices(data)
+	// start sServices
+	+b.SECTION.sServices.section#sServices&attributes(attributes)
+		.container
+			+e.top-row.row.align-items-center
+				.col-auto.d-none.d-sm-block
+					+e.shape--left
+						img(loading="lazy" src="img/svg/sServices-shape-left.svg" alt="")
+				.col
+					+b.section-title.text-center
+						h2 Our services
+				.col-auto.d-none.d-sm-block
+					+e.shape--right
+						img(loading="lazy" src="img/svg/sServices-shape-right.svg" alt="")
+			+e.slider-wrap
+				.swiper.sServices-slider-js
+					.swiper-wrapper
+						+sServicesItem(1)
+							h4 Business Development
+							p Communicate your product and services professionally.
+						+sServicesItem(2)
+							h4 Presales & Lead Generation
+							p Communicate your product and services professionally.
+						+sServicesItem(3)
+							h4 Sales Enablement
+							p Communicate your product and services professionally.
+						+sServicesItem(4)
+							h4 Consulting: Branding, Growth, Scaling
+							p Communicate your product and services professionally.
+						+sServicesItem(5)
+							h4 Data Intelligence & Big Data
+							p Communicate your product and services professionally.
+						+sServicesItem(6)
+							h4 Marketing
+							p Communicate your product and services professionally.
+					.swiper-pagination.d-sm-none
+
+	// end sServices
+
+mixin sServicesItem(imgNum)
+	+e.slide.swiper-slide
+		+e.item
+			+e.img
+				img(loading="lazy" src=`img/svg/sServices-${imgNum}.svg`)
+			+e.txt
+				block

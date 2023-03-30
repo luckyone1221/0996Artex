@@ -1,0 +1,47 @@
+// start .sMore
+.sMore {
+	// --sPT: #{rem(0)};
+	// --sPB: #{rem(0)};
+	// --sTPB: #{rem(0)};
+	
+	&__row{}
+	&__col{
+		&--{}
+		&--{}
+	}
+	&__rim{
+		img{
+
+		}
+	}
+	&__img-row{
+
+	}
+	&__img{
+		img{
+
+		}
+	}
+	&__dots{
+		img{}
+	}
+	//
+	.section-title{
+		h2{}
+	}
+	&__txt{}
+	&__lower-txt{}
+	&__items{}
+	&__item{}
+	&__{}
+	&__{}
+} // end.sMore
+
+.txt-btn{
+	span:first-child{
+
+	}
+	span:last-child{
+
+	}
+}

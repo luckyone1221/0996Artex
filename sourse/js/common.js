@@ -346,6 +346,20 @@ function eventHandler() {
 		this.innerHTML = new Date().getFullYear();
 	})
 
+	//
+	let sServicesSlider = new Swiper('.sServices-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		loop: false,
+		freeMode: true,
+
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
 	//end luckyoneJs
 
 	let defaultSl = {
@@ -373,18 +387,6 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		freeMode: true,
 		watchOverflow: true
-	});
-	
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-
 	});
 
 	// modal window

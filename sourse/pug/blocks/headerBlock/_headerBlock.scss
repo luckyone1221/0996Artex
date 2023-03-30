@@ -1,5 +1,13 @@
 // start .headerBlock
 .headerBlock {
+
+	@include media-breakpoint-down(lg){
+		background-image: url(../img/@2x/headerBlock-gray.jpg);
+		background-repeat: repeat;
+		background-position: center;
+	}
+	//
+
 	--sPT: #{rem(0)};
 	--sPB: #{rem(0)};
 	@include media-breakpoint-up(lg){

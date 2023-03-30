@@ -1,0 +1,37 @@
+mixin sMore(data)
+	// start sMore
+	+b.SECTION.sMore.section#sMore&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col--left
+					+e.rim
+						img(loading="lazy" src="img/@2x/sMore-bg.png" alt="")
+					+e.img-row.row
+						.col-6
+							+sMoreImg(1)
+							+sMoreImg(2)
+						.col-6
+							+sMoreImg(3)
+							+sMoreImg(4)
+					+e.dots
+						img(loading="lazy" src="img/svg/sMore-dots.svg" alt="")
+				+e.col--right
+					+b.section-title.text-center
+						h2 We’re more than an agency.
+					+e.txt Lorem ipsum dolor sit amet consectetur. Semper ut ultricies ultrices adipiscing. Nibh risus mauris adipiscing aliquam turpis. Vel sed iaculis sed augue.
+					+e.lower-txt Lorem ipsum dolor sit amet consectetur remper ut:
+					+e.items
+						+e.item Lorem ipsum dolor sit amet consectetur. Mattis aliquam nullam volutpat mauris felis. Et pulvinar ultricies tellus volutpat quisque.
+						+e.item Lorem ipsum dolor sit amet consectetur. Mattis aliquam nullam volutpat mauris felis. Et pulvinar ultricies tellus
+						+e.item Lorem ipsum dolor sit amet consectetur. Mattis aliquam nullam volutpat mauris felis. Et pulvinar ultricies tellus volutpat quisque.
+					+sMoreBtn('#')
+	// end sMore
+
+mixin sMoreImg(imgNum)
+	+e.img
+		img(loading="lazy" src=`img/@2x/sMore-${imgNum}.jpg` alt="")
+
+mixin sMoreBtn(href="#")
+	+b.txt-btn
+		span Click here to learn mo
+		span re

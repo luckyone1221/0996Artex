@@ -1,0 +1,24 @@
+mixin sClients(data)
+	// start sClients
+	+b.SECTION.sClients.section#sClients&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col--empty.col-lg-4.d-none.d-lg-block
+				+sClientsItem(1)
+				+sClientsItem(2)
+				+sClientsItem(3)
+				+sClientsItem(4)
+				+e.col--title.col-lg-4.order-first.order-lg-0
+					+e.box
+						+b.section-title
+							h2 Our clients
+				+e.col--empty.col-lg-2.d-none.d-lg-block
+				+sClientsItem(5)
+				+sClientsItem(6)
+				+sClientsItem(7, 'd-none d-lg-block')
+	// end sClients
+
+mixin sClientsItem(imgNum, addClasses)
+	+e.col--img.col-4.col-lg-2(class=`${addClasses ? addClasses : ''}`)
+		+e.box
+			img(loading="lazy" src=`img/svg/sClientsItem-${imgNum}.svg` alt="")
