@@ -10,6 +10,21 @@
 		--sPT: #{rem(144)};
 		--sPB: #{rem(144)};
 	}
+
+
+	&--alt{
+		--sPB: #{rem(10)};
+		@include media-breakpoint-up(xxl){
+			--sPT: #{rem(80)};
+			--sPB: #{rem(10)};
+		}
+
+		.sTop__pic-wrap{
+			@include media-breakpoint-up(xxl){
+				left: 48px;
+			}
+		}
+	}
 	
 	&__main-row{
 		margin-bottom: rem(40);

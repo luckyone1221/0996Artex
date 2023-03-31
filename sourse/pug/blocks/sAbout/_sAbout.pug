@@ -1,0 +1,48 @@
+mixin sAbout(data)
+	// start sAbout
+	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+		.container
+			+e.row.row
+				.col-xl-auto
+					+b.section-title
+						h1 We are build different
+				.col-xl
+					+e.txt Lorem ipsum dolor sit amet consectetur. Mattis aliquam nullam volutpat mauris felis. Et pulvinar ultricies tellus volutpat quisque.
+			+pic('sAbout-img.jpg')(class="sAbout__pic")
+			hr
+			+e.smaller-row.row
+				.col-xl-6
+					+e.title Together we are strong
+				.col-xl-6
+					+e.sm-txt
+						strong Lorem ipsum dolor sit amet consectetur. Mattis aliquam nullam volutpat mauris felis. Et pulvinar ultricies tellus volutpat quisque.
+						p Lorem ipsum dolor sit amet consectetur. Eu massa orci facilisis odio a enim augue sit. Sed nulla fringilla venenatis purus consectetur nisi augue magnis dolor. Ut aliquam non imperdiet viverra. Purus risus dictum phasellus sodales maecenas dolor. Massa lectus dignissim eleifend arcu cursus congue etiam at neque. Rhoncus elit pulvinar adipiscing porta quam. Lorem ipsum dolor sit amet consectetur. Eu massa orci facilisis odio a enim augue sit. Sed nulla fringilla venenatis purus consectetur nisi augue magnis dolor. Ut aliquam non imperdiet viverra. Purus risus dictum phasellus sodales maecenas dolor massa lectus.
+						p Lorem ipsum dolor sit amet consectetur. Eu massa orci facilisis odio a enim augue sit. Sed nulla fringilla venenatis purus consectetur nisi augue magnis dolor. Ut aliquam non imperdiet viverra. Purus risus dictum phasellus sodales maecenas dolor. Massa lectus dignissim eleifend arcu cursus congue etiam at neque. Rhoncus elit pulvinar adipiscing porta quam. Lorem ipsum dolor sit amet consectetur.
+			hr
+			+e.digits-row.row.counter-wrap-js(class="wow animate__fadeIn")
+				+sAboutItem(290, "+", 'Lorem ipsum dolor sit amet consectetur. Eu massa orci facilisis odio a enim augue sit. Sed nulla fringilla venenatis purus consectetur ')
+				+sAboutItem(12, "+", 'Lorem ipsum dolor sit amet consectetur. Eu massa orci facilisis odio a enim augue sit. Sed nulla fringilla venenatis purus consectetur ')
+				+sAboutItem(20, "k+", 'Lorem ipsum dolor sit amet consectetur. Eu massa orci facilisis odio a enim augue sit. Sed nulla fringilla venenatis purus consectetur ')
+			+e.quote-row.row
+				+e.col--left.col-xxl-auto.col-xl-5.col-lg-4
+					+e.img-row.row.align-items-center
+						.col-auto
+							+e.img
+								img(loading="lazy" src="img/@2x/sReview-1.png" alt="")
+						.col
+							+e.name Daniel Landa
+							+e.duty Founder & CEO
+				+e.col--right.col-xxl-auto.col-xl-7.col-lg-8
+					blockquote “Lorem ipsum dolor sit amet consectetur. Eu massa orci facilisis odio a enim augue sit. Sed nulla fringilla venenatis purus consectetur nisi augue magnis dolor. Ut aliquam non imperdiet viverra. Purus risus dictum phasellus sodales maecenas dolor. Massa lectus dignissim eleifend arcu cursus congue etiam at neque. Rhoncus elit pulvinar adipiscing porta quam. Lorem ipsum dolor sit amet consectetur.”
+
+
+
+	// end sAbout
+
+mixin sAboutItem(num, addTxt, txt)
+	.col-lg-4
+		+e.item
+			+e.i-txt=txt
+			+e.i-digit
+				span.counter-js=num
+				span=addTxt

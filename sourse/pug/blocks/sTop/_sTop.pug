@@ -2,22 +2,25 @@ mixin sTop(data)
 	// start sTop
 	+b.SECTION.sTop.section#sTop&attributes(attributes)
 		.container
-			+e.main-row.row
+			+e.main-row.row(class=data.addRowClasses)
 				+e.m-col--left.col-md-7
 					+b.section-title
 						h2 We’re the top rated agency.
 						p Lorem ipsum dolor sit amet consectetur. Eu massa orci facilisis odio a enim augue sit. Sed nulla fringilla venenatis purus consectetur nisi augue magnis dolor. Ut aliquam non imperdiet viverra. Purus risus dictum phasellus sodales maecenas dolor.
 						p Lorem ipsum dolor sit amet consectetur. Eu massa orci facilisis odio a enim augue sit. Sed nulla fringilla venenatis purus consectetur nisi augue magnis dolor. Ut aliquam non imperdiet viverra. Purus risus dictum phasellus sodales maecenas dolor. Massa lectus dignissim eleifend arcu cursus congue etiam at neque. Rhoncus elit pulvinar adipiscing porta quam.
-					+sMoreBtn('#')(class="d-none d-md-block")
+					if (data.hasLearnMore)
+						+sMoreBtn('#')(class="d-none d-md-block")
 				+e.m-col--right.col-md-5
 					+e.pic-wrap
 						+pic('sTop-img.jpg')
-			+sMoreBtn('#')(class="d-md-none mb-5")
-			+e.row.row.counter-wrap-js(class="wow animate__fadeIn")
-				+sTopItem(20, 'Years on the market', 'col-xxl-auto')
-				+sTopItem(60, 'Companies cooperate with us', 'col-xxl')
-				+sTopItem(200, 'We have employees', 'col-xxl')
-				+sTopItem(1654, 'Successfully closed orders', 'col-xxl-auto')
+			if (data.hasLearnMore)
+				+sMoreBtn('#')(class="d-md-none mb-5")
+			if (data.hasDigits)
+				+e.row.row.counter-wrap-js(class="wow animate__fadeIn")
+					+sTopItem(20, 'Years on the market', 'col-xxl-auto')
+					+sTopItem(60, 'Companies cooperate with us', 'col-xxl')
+					+sTopItem(200, 'We have employees', 'col-xxl')
+					+sTopItem(1654, 'Successfully closed orders', 'col-xxl-auto')
 	// end sTop
 
 mixin sTopItem(num, txt, colClasses)

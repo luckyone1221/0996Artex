@@ -1,0 +1,211 @@
+// start .sAbout
+.sAbout {
+	--sPT: #{rem(55)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(0)};
+	overflow: hidden;
+
+	&__row{
+		margin-bottom: rem(72);
+		--bs-gutter-x: #{rem(60)};
+		--bs-gutter-y: #{rem(24)};
+	}
+	&__txt{
+		line-height: 1.5;
+
+		@include media-breakpoint-up(xxl){
+			max-width: rem(488);
+			margin-left: auto;
+		}
+	}
+	&__pic{
+		border-radius: rem(14);
+		overflow: hidden;
+
+		height: rem(350);
+		@include media-breakpoint-up(sm){
+			height: rem(400);
+		}
+
+		img{
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	hr{
+		margin: rem(40) 0;
+		@include media-breakpoint-up(xxl){
+			margin: rem(72) 0;
+		}
+
+		border-color: $black;
+	}
+
+	//
+	&__smaller-row{
+		--bs-gutter-y: #{rem(24)};
+		--bs-gutter-x: #{rem(26)};
+		padding-bottom: 30px;
+	}
+	&__title{
+		@extend .h2;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		@include media-breakpoint-up(xl){
+			max-width: rem(400);
+		}
+	}
+	&__sm-txt{
+
+		strong{
+			display: block;
+			font-weight: 500;
+			font-size: rem(20);
+			margin-bottom: rem(32);
+		}
+		p{
+			line-height: 1.38;
+			margin-bottom: rem(24);
+		}
+
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	&__digits-row{
+		--bs-gutter-y: #{rem(24)};
+		--bs-gutter-x: #{rem(32)};
+
+		margin-bottom: rem(60);
+		@include media-breakpoint-up(xxl){
+			margin-bottom: rem(104);
+		}
+	}
+	&__item{
+		@include media-breakpoint-up(xxl){
+			max-width: 88%;
+		}
+	}
+	&__i-txt{
+		line-height: 1.44;
+
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg){
+			min-height: rem(92);
+		}
+	}
+	&__i-digit{
+		font-weight: 600;
+
+		font-size: rem(48);
+		@include media-breakpoint-up(md){
+			font-size: rem(60);
+		}
+		@include media-breakpoint-up(lg){
+			font-size: rem(72);
+		}
+		@include media-breakpoint-up(xxl){
+			font-size: rem(92);
+		}
+
+		line-height: calc(138/92);
+	}
+	//
+	&__quote-row{
+		--bs-gutter-x: #{rem(32)};
+		--bs-gutter-y: #{rem(32)};
+	}
+	&__col{
+		--left-col-w: 40.7%;
+
+		--blockq-py: #{rem(40)};
+		@include media-breakpoint-up(xl){
+			--blockq-py: #{rem(72)};
+		}
+
+		&--left{
+			@include media-breakpoint-up(lg){
+				padding-top: var(--blockq-py);
+			}
+			@include media-breakpoint-up(xxl){
+				width: var(--left-col-w) !important;
+			}
+		}
+		&--right{
+			@include media-breakpoint-up(xxl){
+				width: calc(100% - var(--left-col-w)) !important;
+			}
+
+			blockquote{
+				position: relative;
+				z-index: 1;
+
+				font-style: italic;
+				font-weight: 500;
+
+				font-size: rem(18);
+				@include media-breakpoint-up(sm){
+					font-size: rem(20);
+				}
+
+				&:before{
+					content: '';
+					position: absolute;
+					z-index: -1;
+					pointer-events: none;
+					top: 0;
+					left: 0;
+					width: 100vw;
+					height: 100%;
+
+					background-image: url(../img/@2x/blockquote-bg.jpg);
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+
+				padding: var(--blockq-py) rem(24);
+				@include media-breakpoint-up(sm){
+					padding: var(--blockq-py) rem(32);
+				}
+				@include media-breakpoint-up(lg){
+					padding: var(--blockq-py) 0 var(--blockq-py) rem(60);
+				}
+				@include media-breakpoint-up(xl){
+					padding: var(--blockq-py) 0 var(--blockq-py) rem(115);
+				}
+			}
+		}
+	}
+	&__img-row{
+		--bs-gutter-x: #{rem(20)};
+	}
+	&__img{
+		width: rem(56);
+		height: rem(56);
+		border-radius: 50%;
+		overflow: hidden;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__name{
+		font-weight: 500;
+		font-size: rem(20);
+		line-height: 1.5;
+	}
+	&__duty{
+		font-weight: 500;
+		line-height: 1.5;
+		color: $secondary;
+	}
+	&__{}
+} // end.sAbout

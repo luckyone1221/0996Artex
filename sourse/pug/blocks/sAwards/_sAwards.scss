@@ -1,0 +1,68 @@
+// start .sAwards
+.sAwards {
+	--sTPB: #{rem(40)};
+	@include media-breakpoint-up(md){
+		--sPT: #{rem(5)};
+		--sTPB: #{rem(56)};
+	}
+
+	--sPB: #{rem(70)};
+	@include media-breakpoint-up(lg){
+		--sPB: #{rem(5)};
+	}
+
+	hr{
+		border-color: $black;
+
+		margin-bottom: rem(60);
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(72);
+		}
+	}
+	.section-title{
+		h2{
+			@include media-breakpoint-up(lg){
+				max-width: rem(383);
+			}
+			margin-bottom: rem(32);
+		}
+		p{
+			font-size: rem(20);
+			line-height: 1.5;
+
+			@include media-breakpoint-up(lg){
+				max-width: rem(695);
+			}
+		}
+	}
+
+	&__slider-wrap{
+		.swiper{
+			overflow: visible!important;
+		}
+		.swiper-wrapper{
+
+		}
+
+		.swiper-slide{
+			width: 136px;
+		}
+	}
+	&__pic{
+		height: auto;
+		width: 100%;
+
+		@include mt();
+		filter: grayscale(1);
+		&:hover{
+			filter: grayscale(0);
+		}
+
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__{}
+	&__{}
+} // end.sAwards

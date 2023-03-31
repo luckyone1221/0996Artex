@@ -1,0 +1,23 @@
+mixin sAwards(data)
+	// start sAwards
+	+b.SECTION.sAwards.section#sAwards&attributes(attributes)
+		.container
+			hr
+			+b.section-title
+				h2 Recognition and awards
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quisque facilisis nulla dolor sit. Massa lectus dignissim eleifend arcu cursus congue etiam at neque.
+			+e.slider-wrap
+				.swiper.sAwards-slider-js
+					.swiper-wrapper
+						+sAwardsItem(1)
+						+sAwardsItem(2)
+						+sAwardsItem(3)
+						+sAwardsItem(4)
+						+sAwardsItem(5)
+	// end sAwards
+
+
+
+mixin sAwardsItem(imgNum)
+	.swiper-slide
+		+pic(`sAwards-${imgNum}.png`)(class="sAwards__pic")

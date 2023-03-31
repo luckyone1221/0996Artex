@@ -395,6 +395,21 @@ function eventHandler() {
 		},
 	});
 
+	//
+	let sAwardsSlider = new Swiper('.sAwards-slider-js', {
+		slidesPerView: 'auto',
+		breakpoints: {
+			0: {
+				spaceBetween: 30,
+			},
+			1200: {
+				spaceBetween: 80,
+			},
+		},
+		loop: false,
+		freeMode: true,
+	});
+
 	//end luckyoneJs
 
 	let defaultSl = {
