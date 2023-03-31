@@ -18,11 +18,13 @@ include ../blocks/sMore/_sMore.pug
 include ../blocks/sAwards/_sAwards.pug
 include ../blocks/sTop/_sTop.pug
 include ../blocks/sReview/_sReview.pug
+include ../blocks/sGetInT/_sGetInT.pug
+include ../blocks/sMap/_sMap.pug
 include ../blocks/footer/_footer.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg='about.png'
+	- let  bg='contact.png'
 
 block title
 	- let  title= index.head.title
@@ -30,22 +32,17 @@ block title
 block pagecontent
 	+mob-mnu()
 		li.menu-item: a(href="/") Home
-		li.menu-item: a.current(href="/about.html") About
-		li.menu-item: a(href="/contact.html") Contact
+		li.menu-item: a(href="/about.html") About
+		li.menu-item: a.current(href="/contact.html") Contact
 	+header()
 		+top-nav()
 			li.menu-item: a(href="/") Home
-			li.menu-item: a.current(href="/about.html") About
-			li.menu-item: a(href="/contact.html") Contact
+			li.menu-item: a(href="/about.html") About
+			li.menu-item: a.current(href="/contact.html") Contact
 	main
-		+sAbout()
-		+sTop({
-			hasDigits: false,
-			hasLearnMore: false,
-			addRowClasses: "flex-md-row-reverse"
-		})(class="sTop--alt")
-		+sAwards()
+		+sGetInT()
+		+sMap()
 	+footer()
 		li.menu-item: a(href="/") Home
-		li.menu-item: a.current(href="/about.html") About
-		li.menu-item: a(href="/contact.html") Contact
+		li.menu-item: a(href="/about.html") About
+		li.menu-item: a.current(href="/contact.html") Contact

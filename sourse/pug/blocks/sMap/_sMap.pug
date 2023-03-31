@@ -1,0 +1,116 @@
+mixin sMap(data)
+	// start sMap
+	+b.SECTION.sMap.section#sMap&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 We’d love to hear from you
+				p We have offices and teams all around the world.
+			+e.slider-wrap
+				.swiper.sMap-slider-js
+					.swiper-wrapper
+						.swiper-slide
+							+e.map-box
+								+e.map
+									img(loading="lazy" src="img/svg/sMap-img.svg")
+								+sMapItem({
+									top: '28%',
+									left: '64.5%',
+									imgName: 'flag-ua.jpg',
+									locationBold: 'Ukraine, Lviv',
+									locationLight: 'Hryhoriya Hrabianka Street, 5b Lviv, Lviv region, 79053',
+								})
+								+sMapItem({
+									top: '0%',
+									left: '0%',
+									imgName: 'flag-ua.jpg',
+									locationBold: 'lorem',
+									locationLight: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, neque!',
+								})
+								+sMapItem({
+									top: '0%',
+									left: '0%',
+									imgName: 'flag-ua.jpg',
+									locationBold: 'lorem',
+									locationLight: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, neque!',
+								})
+								+sMapItem({
+									top: '0%',
+									left: '0%',
+									imgName: 'flag-ua.jpg',
+									locationBold: 'lorem',
+									locationLight: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, neque!',
+								})
+								+sMapItem({
+									top: '0%',
+									left: '0%',
+									imgName: 'flag-ua.jpg',
+									locationBold: 'lorem',
+									locationLight: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, neque!',
+								})
+								+sMapItem({
+									top: '0%',
+									left: '0%',
+									imgName: 'flag-ua.jpg',
+									locationBold: 'lorem',
+									locationLight: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, neque!',
+								})
+								+sMapItem({
+									top: '0%',
+									left: '0%',
+									imgName: 'flag-ua.jpg',
+									locationBold: 'lorem',
+									locationLight: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, neque!',
+								})
+								+sMapItem({
+									top: '0%',
+									left: '0%',
+									imgName: 'flag-ua.jpg',
+									locationBold: 'lorem',
+									locationLight: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, neque!',
+								})
+								+sMapItem({
+									top: '0%',
+									left: '0%',
+									imgName: 'flag-ua.jpg',
+									locationBold: 'lorem',
+									locationLight: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, neque!',
+								})
+			+e.bot-row.row
+				+sMapBotItem({
+					title: 'Suppot',
+					txt: 'Our friendly team is here to help',
+					href: 'mailto:support@atrexgroup.com',
+					linkTxt: 'support@atrexgroup.com',
+				})
+				+sMapBotItem({
+					title: 'For other inquiries',
+					txt: 'Get in touch with our HR department',
+					href: 'mailto:sales@atrexgroup.com',
+					linkTxt: 'sales@atrexgroup.com',
+				})
+				+sMapBotItem({
+					title: 'Phone',
+					txt: 'Mon-Fri from 8am to 5pm.',
+					href: 'tel:+1444000000',
+					linkTxt: '+1(444) 000-000',
+				})
+
+	// end sMap
+
+mixin sMapBotItem(data)
+	.col-lg-4
+		+e.bot-item.text-md-center
+			+e.H4.title=data.title
+			+e.txt=data.txt
+			+e.link(href=data.href)=data.linkTxt
+
+mixin sMapItem(data)
+	+e.item(style=`top: ${data.top}; left: ${data.left};`)
+		+e.dot
+			+e.wawe--1
+			+e.wawe--2
+			+e.wawe--3
+			+e.tooltip.text-center
+				+pic(data.imgName)(class="sMap__flag")
+				+e.bold=data.locationBold
+				+e.light=data.locationLight

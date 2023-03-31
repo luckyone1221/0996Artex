@@ -410,6 +410,12 @@ function eventHandler() {
 		freeMode: true,
 	});
 
+	//
+	let sMapSlider = new Swiper('.sMap-slider-js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+	});
+
 	//end luckyoneJs
 
 	let defaultSl = {

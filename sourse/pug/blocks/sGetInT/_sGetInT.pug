@@ -1,0 +1,15 @@
+mixin sGetInT(data)
+	// start sGetInT
+	+b.SECTION.sGetInT.section#sGetInT&attributes(attributes)
+		+e.bg
+			+pic('sGetInT-bg.jpg')
+			+e.bg-cont.container.d-none.d-md-block
+				img.top-img(loading="lazy" src="img/svg/sGetInT-dots-top.svg" alt="")
+				img.bot-img(loading="lazy" src="img/svg/sGetInT-dots.svg" alt="")
+		.container
+			+b.section-title
+				h1 Get in Touch
+				p Tell us about your business and we’ll tell you how we can help achieve your goals. Schedule a meeting today.
+			+e.calendly
+				+pic('stab')(class="sGetInT__stab")
+	// end sGetInT
