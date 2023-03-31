@@ -1,2 +1,2 @@
-1. <https://megafronteam.github.io/0996Artex/public/index.html>
-2. <https://megafronteam.github.io/0996Artex/public/about.html>
+1. <https://luckyone1221.github.io/0996Artex/public/index.html>
+2. <https://luckyone1221.github.io/0996Artex/public/about.html>
