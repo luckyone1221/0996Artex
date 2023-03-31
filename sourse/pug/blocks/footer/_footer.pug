@@ -1,9 +1,26 @@
 mixin footer()
 	+b.FOOTER.footer.section
-		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+		+e.container.container
+			+e.top-row.row.align-items-center.align-items-xxl-start
+				.col-lg-4
+					+mnu()
+						block
+				.col-lg-4
+					+e.soc-row.row.justify-content-lg-center
+						+footerSoc('inst', '#')
+						+footerSoc('tw', '#')
+						+footerSoc('fb', '#')
+						+footerSoc('linkedin', '#')
+				.col-lg-4
+					+e.copy-right
+						| Copyright ©
+						|
+						span.put-curr-year-js 2023
+						|
+						| Atrex Group, Inc. All rights reserved
+
+
+mixin footerSoc(icon, href)
+	.col-auto
+		+e.soc(href=href)
+			img(loading="lazy" src=`img/svg/footer-soc-${icon}.svg` alt="")
